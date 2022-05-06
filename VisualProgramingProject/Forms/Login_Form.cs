@@ -71,6 +71,7 @@ namespace VisualProgramingProject.Forms
                         Home_Form f1 = new Home_Form();
                         f1.receivingID(int.Parse(txtID.Text));
                         f1.ShowDialog();
+                        this.Close();
                     }
                     else
                     {
@@ -102,6 +103,7 @@ namespace VisualProgramingProject.Forms
             waitForm.ShowDialog();
             Student_Record_Form st = new Student_Record_Form();
             st.ShowDialog();
+            this.Close();
         }
 
         private void Login_Form_Load(object sender, EventArgs e)

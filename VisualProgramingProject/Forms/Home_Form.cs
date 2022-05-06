@@ -120,6 +120,7 @@ namespace VisualProgramingProject
             wait.ShowDialog();
             Login_Form log = new Login_Form();
             log.ShowDialog();
+            this.Close();
         }
 
         private void btnClose_Click(object sender, EventArgs e)

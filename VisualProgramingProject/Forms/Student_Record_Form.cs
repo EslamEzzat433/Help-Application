@@ -22,7 +22,7 @@ namespace VisualProgramingProject.Forms
         public Student_Record_Form()
         {
             InitializeComponent();
-            connectionString = "Data Source={serverName};Initial Catalog={databaseName};Integrated Security=True";
+            connectionString = $"Data Source={serverName};Initial Catalog={databaseName};Integrated Security=True";
             sqlConnection = new SqlConnection(connectionString);
         }
 
@@ -37,28 +37,56 @@ namespace VisualProgramingProject.Forms
                     Connect connect = new Connect();
                     connect.db_ConnectionToDatabase(false, sqlConnection);
                 }
-                SqlCommand cmd = new SqlCommand("insert into StudentDetails(StudentID,StudentName,StudentAge,StudentAddress,Password,Gender) Values (@StudentID,@StudentName,@StudentAge,@StudentAddress,@Password,@Gender)", sqlConnection);
-                cmd.Parameters.AddWithValue("@StudentID", int.Parse(studentId.Text));
-                cmd.Parameters.AddWithValue("@StudentName", studentName.Text);
-                cmd.Parameters.AddWithValue("@StudentAge", int.Parse(studentAge.Text));
-                cmd.Parameters.AddWithValue("@StudentAddress", studentAddress.Text);
-                cmd.Parameters.AddWithValue("@Password", int.Parse(studentPassword.Text));
-                if (genderMale.Checked)
+                SqlCommand sqlCommand;
+                SqlDataReader sqlDataReader;
+                string sql = "";
+                string ID = "";
+                sql = $"Select StudentID from [StudentDetails] WHERE StudentID={int.Parse(studentId.Text)}";
+                sqlCommand = new SqlCommand(sql, sqlConnection);
+                sqlDataReader = sqlCommand.ExecuteReader();
+                while (sqlDataReader.Read())
                 {
-                    cmd.Parameters.AddWithValue("@Gender", genderMale.Text);
+                    ID = sqlDataReader.GetValue(0).ToString();
                 }
-                else if (genderFemale.Checked)
+                sqlDataReader.Close();
+                if (ID == "")
                 {
-                    cmd.Parameters.AddWithValue("@Gender", genderFemale.Text);
-                }
-                cmd.ExecuteNonQuery();
-                if (!Directory.Exists("img"))
-                    Directory.CreateDirectory("img");
-                picPerson.Image.Save("img/" + studentId.Text + ".jpg");
-                MessageBox.Show("Your Account Created");
-            }
+                    if (picPerson.Image != null)
+                    {
+                        Directory.CreateDirectory("img");
+                        picPerson.Image.Save("img/" + studentId.Text + ".jpg");
+                        MessageBox.Show("Your Account Created");
 
-            catch (Exception ex)
+                        SqlCommand cmd = new SqlCommand("insert into StudentDetails(StudentID,StudentName,StudentAge,StudentAddress,Password,Gender) Values (@StudentID,@StudentName,@StudentAge,@StudentAddress,@Password,@Gender)", sqlConnection);
+                        cmd.Parameters.AddWithValue("@StudentID", int.Parse(studentId.Text));
+                        cmd.Parameters.AddWithValue("@StudentName", studentName.Text);
+                        cmd.Parameters.AddWithValue("@StudentAge", int.Parse(studentAge.Text));
+                        cmd.Parameters.AddWithValue("@StudentAddress", studentAddress.Text);
+                        cmd.Parameters.AddWithValue("@Password", int.Parse(studentPassword.Text));
+                        if (genderMale.Checked)
+                        {
+                            cmd.Parameters.AddWithValue("@Gender", genderMale.Text);
+                        }
+                        else if (genderFemale.Checked)
+                        {
+                            cmd.Parameters.AddWithValue("@Gender", genderFemale.Text);
+                        }
+                        cmd.ExecuteNonQuery();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Please Select Photo\n", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        picPerson.Image = null;
+                    }
+
+                }
+                else
+                {
+                    MessageBox.Show("This ID Exist, Please Write Another One\n", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    picPerson.Image = null;
+                }
+            }
+            catch (Exception)
             {
                 MessageBox.Show("Please, Fill the Box", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error, MessageBoxDefaultButton.Button1);
             }
@@ -75,6 +103,7 @@ namespace VisualProgramingProject.Forms
             this.Hide();
             Login_Form login = new Login_Form();
             login.ShowDialog();
+            this.Close();
         }
         private void btnSelectPhoto_Click(object sender, EventArgs e)
         {
@@ -85,6 +114,7 @@ namespace VisualProgramingProject.Forms
             {
                 picPerson.Image = Image.FromFile(of.FileName);
             }
+
         }
         private void btnClear_Click(object sender, EventArgs e)
         {
