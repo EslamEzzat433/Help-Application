@@ -101,6 +101,12 @@
     <Compile Include="Forms\Wait_Form.Designer.cs">
       <DependentUpon>Wait_Form.cs</DependentUpon>
     </Compile>
+    <Compile Include="Links_Form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Links_Form.Designer.cs">
+      <DependentUpon>Links_Form.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Forms\Calculator_Form.resx">
@@ -126,6 +132,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\Wait_Form.resx">
       <DependentUpon>Wait_Form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Links_Form.resx">
+      <DependentUpon>Links_Form.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

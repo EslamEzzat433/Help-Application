@@ -39,7 +39,7 @@ namespace VisualProgramingProject
             Form frm = form as Form;
             frm.TopLevel = false;
             panelformularios.Controls.Add(frm);
-            frm.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            frm.FormBorderStyle = FormBorderStyle.None;
             ///frm.Dock = DockStyle.Fill;
             frm.Show();
             panelformularios.BringToFront();
@@ -98,8 +98,8 @@ namespace VisualProgramingProject
             while (sqlDataReader.Read())
             {
                 lblID.Text = sqlDataReader.GetValue(0).ToString();
-                lblName.Text= sqlDataReader.GetValue(1).ToString();
-                
+                lblName.Text = sqlDataReader.GetValue(1).ToString();
+
                 string myPath = "img/" + lblID.Text + ".jpg";
                 if (File.Exists(myPath))
                     picPerson.Image = Image.FromFile(myPath);
@@ -129,7 +129,12 @@ namespace VisualProgramingProject
         }
         private void btnMinimiz_Click(object sender, EventArgs e)
         {
-            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
+            this.WindowState = FormWindowState.Minimized;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ShowForm(new Links_Form());
         }
     }
 }

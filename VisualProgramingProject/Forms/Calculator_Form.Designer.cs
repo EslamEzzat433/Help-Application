@@ -74,12 +74,13 @@ namespace VisualProgramingProject
             // 
             // txtCal
             // 
-            this.txtCal.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCal.Font = new System.Drawing.Font("Droid Arabic Kufi", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtCal.Location = new System.Drawing.Point(195, 178);
             this.txtCal.Multiline = true;
             this.txtCal.Name = "txtCal";
             this.txtCal.Size = new System.Drawing.Size(356, 40);
             this.txtCal.TabIndex = 39;
+            this.txtCal.TextChanged += new System.EventHandler(this.txtCal_TextChanged);
             // 
             // btnExit
             // 

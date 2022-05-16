@@ -29,24 +29,13 @@ namespace VisualProgramingProject.Forms
             beginX = e.X;
             beginY = e.Y;
         }
-
+        Pen p = new Pen(Color.Black, 4);
         private void Paint_Form_MouseMove(object sender, MouseEventArgs e)
         {
             Graphics g = this.CreateGraphics();
-            Pen p = new Pen(Color.Black, 4);
-            if (this.BackColor==Color.White)
-            {
-                 p = new Pen(Color.Black, 4);
-            }
-            else
-            {
-                p = new Pen(Color.White, 4);
-            }
-                
-
             Point point1 = new Point(beginX, beginY);
             Point point2 = new Point(e.X, e.Y);
-            if(drw==true)
+            if (drw == true)
             {
                 g.DrawLine(p, point1, point2);
                 beginX = e.X;
@@ -56,8 +45,8 @@ namespace VisualProgramingProject.Forms
 
         private void Paint_Form_Load(object sender, EventArgs e)
         {
-            this.Text = "Paint";
             this.BackColor = Color.Black;
+            p = new Pen(Color.White, 4);
         }
 
         private void btnClear_Click(object sender, EventArgs e)
@@ -68,14 +57,19 @@ namespace VisualProgramingProject.Forms
         private void btnBlack_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.Black;
-            this.ForeColor = Color.White;
-            
         }
 
         private void btnWhite_Click(object sender, EventArgs e)
         {
             this.BackColor = Color.White;
-            this.ForeColor = Color.Black;
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+            if (colorDialog1.ShowDialog() == DialogResult.OK)
+            {
+                p = new Pen(colorDialog1.Color, 4);
+            }
         }
     }
 }

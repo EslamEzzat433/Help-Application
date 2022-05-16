@@ -17,8 +17,8 @@ namespace VisualProgramingProject
             InitializeComponent();
         }
 
-       
-      
+
+
         private void btnExit_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -119,7 +119,7 @@ namespace VisualProgramingProject
             txtCal.Text += "-";
         }
 
-       
+
         private void btn_Eque_Click(object sender, EventArgs e)
         {
             bool checkDot1 = false;
@@ -130,11 +130,33 @@ namespace VisualProgramingProject
             double num1Dot = 0.0;
             double num2Dot = 0.0;
             char op = ' ';
+            int counterNumOfOperation = 0;
             bool check = false;
             for (int i = 0; i < Cal.Length; i++)
             {
+                if (counterNumOfOperation > 1)
+                {
+                    switch (op)
+                    {
+                        case '+':
+                            txtCal.Text = (num1 + num2).ToString();
+                            break;
+                        case '-':
+                            txtCal.Text = (num1 - num2).ToString();
+                            break;
+                        case '*':
+                            txtCal.Text = (num1 * num2).ToString();
+                            break;
+                        case '/':
+                            txtCal.Text = (num1 / num2).ToString();
+                            break;
+                    }
+                    num1 = double.Parse(txtCal.Text);
+                    num2 = 0;
+                }
                 if (Cal[i] == '+' || Cal[i] == '-' || Cal[i] == '*' || Cal[i] == '/')
                 {
+                    counterNumOfOperation++;
                     check = true;
                     op = Cal[i];
                 }
@@ -206,6 +228,11 @@ namespace VisualProgramingProject
         private void btn_C_Click(object sender, EventArgs e)
         {
             txtCal.Text = "";
+        }
+
+        private void txtCal_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

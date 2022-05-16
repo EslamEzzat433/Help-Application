@@ -33,6 +33,8 @@ namespace VisualProgramingProject
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.panelformularios = new System.Windows.Forms.Panel();
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.picPerson = new Guna.UI2.WinForms.Guna2PictureBox();
             this.btnSearch = new System.Windows.Forms.Button();
             this.btnLogout = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -40,6 +42,7 @@ namespace VisualProgramingProject
             this.btn_Note = new System.Windows.Forms.Button();
             this.btnCalculat = new System.Windows.Forms.Button();
             this.panelBarraTitulo = new System.Windows.Forms.Panel();
+            this.btnMinimiz = new Guna.UI2.WinForms.Guna2CircleButton();
             this.btnClose = new Guna.UI2.WinForms.Guna2CircleButton();
             this.label1 = new System.Windows.Forms.Label();
             this.lblName = new System.Windows.Forms.Label();
@@ -49,11 +52,9 @@ namespace VisualProgramingProject
             this.lblTime = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.lblID = new System.Windows.Forms.Label();
-            this.picPerson = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.btnMinimiz = new Guna.UI2.WinForms.Guna2CircleButton();
             this.panelMenu.SuspendLayout();
-            this.panelBarraTitulo.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).BeginInit();
+            this.panelBarraTitulo.SuspendLayout();
             this.SuspendLayout();
             // 
             // openFileDialog1
@@ -74,6 +75,7 @@ namespace VisualProgramingProject
             // panelMenu
             // 
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(4)))), ((int)(((byte)(41)))), ((int)(((byte)(68)))));
+            this.panelMenu.Controls.Add(this.button1);
             this.panelMenu.Controls.Add(this.picPerson);
             this.panelMenu.Controls.Add(this.btnSearch);
             this.panelMenu.Controls.Add(this.btnLogout);
@@ -87,6 +89,39 @@ namespace VisualProgramingProject
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(188, 732);
             this.panelMenu.TabIndex = 4;
+            // 
+            // button1
+            // 
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(50)))), ((int)(((byte)(70)))));
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(12)))), ((int)(((byte)(61)))), ((int)(((byte)(92)))));
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Gainsboro;
+            this.button1.Image = ((System.Drawing.Image)(resources.GetObject("button1.Image")));
+            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button1.Location = new System.Drawing.Point(9, 400);
+            this.button1.Margin = new System.Windows.Forms.Padding(2);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(173, 40);
+            this.button1.TabIndex = 45;
+            this.button1.Text = "Links";
+            this.button1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // picPerson
+            // 
+            this.picPerson.BorderRadius = 70;
+            this.picPerson.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
+            this.picPerson.ImageRotate = 0F;
+            this.picPerson.Location = new System.Drawing.Point(3, 3);
+            this.picPerson.Name = "picPerson";
+            this.picPerson.Size = new System.Drawing.Size(182, 187);
+            this.picPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picPerson.TabIndex = 44;
+            this.picPerson.TabStop = false;
             // 
             // btnSearch
             // 
@@ -165,7 +200,7 @@ namespace VisualProgramingProject
             this.btnPaint.ForeColor = System.Drawing.Color.Gainsboro;
             this.btnPaint.Image = ((System.Drawing.Image)(resources.GetObject("btnPaint.Image")));
             this.btnPaint.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnPaint.Location = new System.Drawing.Point(11, 330);
+            this.btnPaint.Location = new System.Drawing.Point(9, 334);
             this.btnPaint.Margin = new System.Windows.Forms.Padding(2);
             this.btnPaint.Name = "btnPaint";
             this.btnPaint.Size = new System.Drawing.Size(173, 40);
@@ -186,7 +221,7 @@ namespace VisualProgramingProject
             this.btn_Note.ForeColor = System.Drawing.Color.Gainsboro;
             this.btn_Note.Image = ((System.Drawing.Image)(resources.GetObject("btn_Note.Image")));
             this.btn_Note.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btn_Note.Location = new System.Drawing.Point(11, 272);
+            this.btn_Note.Location = new System.Drawing.Point(9, 277);
             this.btn_Note.Margin = new System.Windows.Forms.Padding(2);
             this.btn_Note.Name = "btn_Note";
             this.btn_Note.Size = new System.Drawing.Size(173, 40);
@@ -228,6 +263,25 @@ namespace VisualProgramingProject
             this.panelBarraTitulo.Name = "panelBarraTitulo";
             this.panelBarraTitulo.Size = new System.Drawing.Size(779, 32);
             this.panelBarraTitulo.TabIndex = 5;
+            // 
+            // btnMinimiz
+            // 
+            this.btnMinimiz.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimiz.BackgroundImage")));
+            this.btnMinimiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnMinimiz.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnMinimiz.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimiz.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
+            this.btnMinimiz.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
+            this.btnMinimiz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
+            this.btnMinimiz.FillColor = System.Drawing.Color.Transparent;
+            this.btnMinimiz.Font = new System.Drawing.Font("Segoe UI", 9F);
+            this.btnMinimiz.ForeColor = System.Drawing.Color.White;
+            this.btnMinimiz.Location = new System.Drawing.Point(695, 3);
+            this.btnMinimiz.Name = "btnMinimiz";
+            this.btnMinimiz.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
+            this.btnMinimiz.Size = new System.Drawing.Size(33, 26);
+            this.btnMinimiz.TabIndex = 0;
+            this.btnMinimiz.Click += new System.EventHandler(this.btnMinimiz_Click);
             // 
             // btnClose
             // 
@@ -331,37 +385,6 @@ namespace VisualProgramingProject
             this.lblID.TabIndex = 6;
             this.lblID.Text = "ID";
             // 
-            // picPerson
-            // 
-            this.picPerson.BorderRadius = 70;
-            this.picPerson.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(41)))), ((int)(((byte)(50)))));
-            this.picPerson.ImageRotate = 0F;
-            this.picPerson.Location = new System.Drawing.Point(3, 3);
-            this.picPerson.Name = "picPerson";
-            this.picPerson.Size = new System.Drawing.Size(182, 187);
-            this.picPerson.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.picPerson.TabIndex = 44;
-            this.picPerson.TabStop = false;
-            // 
-            // btnMinimiz
-            // 
-            this.btnMinimiz.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnMinimiz.BackgroundImage")));
-            this.btnMinimiz.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnMinimiz.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimiz.DisabledState.BorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimiz.DisabledState.CustomBorderColor = System.Drawing.Color.DarkGray;
-            this.btnMinimiz.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(169)))), ((int)(((byte)(169)))), ((int)(((byte)(169)))));
-            this.btnMinimiz.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(141)))), ((int)(((byte)(141)))));
-            this.btnMinimiz.FillColor = System.Drawing.Color.Transparent;
-            this.btnMinimiz.Font = new System.Drawing.Font("Segoe UI", 9F);
-            this.btnMinimiz.ForeColor = System.Drawing.Color.White;
-            this.btnMinimiz.Location = new System.Drawing.Point(695, 3);
-            this.btnMinimiz.Name = "btnMinimiz";
-            this.btnMinimiz.ShadowDecoration.Mode = Guna.UI2.WinForms.Enums.ShadowMode.Circle;
-            this.btnMinimiz.Size = new System.Drawing.Size(33, 26);
-            this.btnMinimiz.TabIndex = 0;
-            this.btnMinimiz.Click += new System.EventHandler(this.btnMinimiz_Click);
-            // 
             // Home_Form
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -385,8 +408,8 @@ namespace VisualProgramingProject
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Home_Form_Load);
             this.panelMenu.ResumeLayout(false);
-            this.panelBarraTitulo.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picPerson)).EndInit();
+            this.panelBarraTitulo.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -414,6 +437,7 @@ namespace VisualProgramingProject
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label lblID;
         private Guna.UI2.WinForms.Guna2CircleButton btnMinimiz;
+        private System.Windows.Forms.Button button1;
     }
 }
 

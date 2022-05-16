@@ -173,15 +173,16 @@ namespace VisualProgramingProject.Forms
             this.studentPassword.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.studentPassword.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.studentPassword.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.studentPassword.Location = new System.Drawing.Point(255, 376);
+            this.studentPassword.Location = new System.Drawing.Point(255, 368);
             this.studentPassword.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.studentPassword.MaxLength = 1000;
             this.studentPassword.Name = "studentPassword";
             this.studentPassword.PasswordChar = '\0';
             this.studentPassword.PlaceholderForeColor = System.Drawing.Color.Black;
             this.studentPassword.PlaceholderText = "";
             this.studentPassword.SelectedText = "";
             this.studentPassword.Size = new System.Drawing.Size(252, 32);
-            this.studentPassword.TabIndex = 41;
+            this.studentPassword.TabIndex = 6;
             this.toolTip.SetToolTip(this.studentPassword, "Please Enter Your Password");
             // 
             // studentAddress
@@ -199,15 +200,16 @@ namespace VisualProgramingProject.Forms
             this.studentAddress.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.studentAddress.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
             this.studentAddress.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.studentAddress.Location = new System.Drawing.Point(255, 251);
+            this.studentAddress.Location = new System.Drawing.Point(255, 246);
             this.studentAddress.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.studentAddress.MaxLength = 70;
             this.studentAddress.Name = "studentAddress";
             this.studentAddress.PasswordChar = '\0';
             this.studentAddress.PlaceholderForeColor = System.Drawing.Color.Black;
             this.studentAddress.PlaceholderText = "";
             this.studentAddress.SelectedText = "";
             this.studentAddress.Size = new System.Drawing.Size(252, 32);
-            this.studentAddress.TabIndex = 41;
+            this.studentAddress.TabIndex = 3;
             this.toolTip.SetToolTip(this.studentAddress, "Please Enter Your Address");
             // 
             // studentAge
@@ -227,13 +229,14 @@ namespace VisualProgramingProject.Forms
             this.studentAge.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.studentAge.Location = new System.Drawing.Point(255, 198);
             this.studentAge.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.studentAge.MaxLength = 3;
             this.studentAge.Name = "studentAge";
             this.studentAge.PasswordChar = '\0';
             this.studentAge.PlaceholderForeColor = System.Drawing.Color.Black;
             this.studentAge.PlaceholderText = "";
             this.studentAge.SelectedText = "";
             this.studentAge.Size = new System.Drawing.Size(252, 32);
-            this.studentAge.TabIndex = 41;
+            this.studentAge.TabIndex = 2;
             this.toolTip.SetToolTip(this.studentAge, "Please Enter Your Age");
             // 
             // studentName
@@ -253,13 +256,14 @@ namespace VisualProgramingProject.Forms
             this.studentName.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.studentName.Location = new System.Drawing.Point(255, 139);
             this.studentName.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.studentName.MaxLength = 12;
             this.studentName.Name = "studentName";
             this.studentName.PasswordChar = '\0';
             this.studentName.PlaceholderForeColor = System.Drawing.Color.Black;
             this.studentName.PlaceholderText = "";
             this.studentName.SelectedText = "";
             this.studentName.Size = new System.Drawing.Size(252, 32);
-            this.studentName.TabIndex = 41;
+            this.studentName.TabIndex = 1;
             this.toolTip.SetToolTip(this.studentName, "Please Enter Your Full Name");
             // 
             // studentId
@@ -279,13 +283,14 @@ namespace VisualProgramingProject.Forms
             this.studentId.HoverState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.studentId.Location = new System.Drawing.Point(255, 87);
             this.studentId.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
+            this.studentId.MaxLength = 7;
             this.studentId.Name = "studentId";
             this.studentId.PasswordChar = '\0';
             this.studentId.PlaceholderForeColor = System.Drawing.Color.Black;
             this.studentId.PlaceholderText = "";
             this.studentId.SelectedText = "";
             this.studentId.Size = new System.Drawing.Size(252, 32);
-            this.studentId.TabIndex = 41;
+            this.studentId.TabIndex = 0;
             this.toolTip.SetToolTip(this.studentId, "Please Enter Your ID");
             // 
             // groupBox1
@@ -312,7 +317,7 @@ namespace VisualProgramingProject.Forms
             this.genderFemale.Location = new System.Drawing.Point(278, 28);
             this.genderFemale.Name = "genderFemale";
             this.genderFemale.Size = new System.Drawing.Size(113, 33);
-            this.genderFemale.TabIndex = 39;
+            this.genderFemale.TabIndex = 5;
             this.genderFemale.Text = "Female";
             this.toolTip.SetToolTip(this.genderFemale, "Please Chose Your Gender Female");
             this.genderFemale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -332,7 +337,7 @@ namespace VisualProgramingProject.Forms
             this.genderMale.Location = new System.Drawing.Point(142, 28);
             this.genderMale.Name = "genderMale";
             this.genderMale.Size = new System.Drawing.Size(84, 33);
-            this.genderMale.TabIndex = 39;
+            this.genderMale.TabIndex = 4;
             this.genderMale.Text = "Male";
             this.toolTip.SetToolTip(this.genderMale, "Please Chose Your Gender Male");
             this.genderMale.UncheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(125)))), ((int)(((byte)(137)))), ((int)(((byte)(149)))));
@@ -357,7 +362,7 @@ namespace VisualProgramingProject.Forms
             this.btnSelectPhoto.Location = new System.Drawing.Point(515, 295);
             this.btnSelectPhoto.Name = "btnSelectPhoto";
             this.btnSelectPhoto.Size = new System.Drawing.Size(194, 53);
-            this.btnSelectPhoto.TabIndex = 6;
+            this.btnSelectPhoto.TabIndex = 7;
             this.btnSelectPhoto.Text = "Select Photo";
             this.toolTip.SetToolTip(this.btnSelectPhoto, "Select Photo From File ");
             this.btnSelectPhoto.Click += new System.EventHandler(this.btnSelectPhoto_Click);
@@ -380,7 +385,7 @@ namespace VisualProgramingProject.Forms
             this.SaveToDatabase.Location = new System.Drawing.Point(54, 466);
             this.SaveToDatabase.Name = "SaveToDatabase";
             this.SaveToDatabase.Size = new System.Drawing.Size(103, 53);
-            this.SaveToDatabase.TabIndex = 5;
+            this.SaveToDatabase.TabIndex = 8;
             this.SaveToDatabase.Text = "Save";
             this.toolTip.SetToolTip(this.SaveToDatabase, "If You Wont To Save Information");
             this.SaveToDatabase.Click += new System.EventHandler(this.SaveToDatabase_Click);
@@ -403,7 +408,7 @@ namespace VisualProgramingProject.Forms
             this.btnClear.Location = new System.Drawing.Point(335, 466);
             this.btnClear.Name = "btnClear";
             this.btnClear.Size = new System.Drawing.Size(103, 53);
-            this.btnClear.TabIndex = 6;
+            this.btnClear.TabIndex = 9;
             this.btnClear.Text = "Clear";
             this.toolTip.SetToolTip(this.btnClear, "If You Wont To Clear All TextBox");
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
@@ -426,7 +431,7 @@ namespace VisualProgramingProject.Forms
             this.btnExit.Location = new System.Drawing.Point(606, 466);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(103, 53);
-            this.btnExit.TabIndex = 7;
+            this.btnExit.TabIndex = 10;
             this.btnExit.Text = "Exit";
             this.toolTip.SetToolTip(this.btnExit, "Go To Login Form");
             this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
